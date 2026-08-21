@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inland Marketing Group | Digital Marketing for the Inland Empire</title>
+<meta name="description" content="Inland Marketing Group builds search-ready websites and runs local SEO, AI search visibility, and digital marketing for Inland Empire businesses — Riverside, San Bernardino, Ontario, and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C8102E;
+  --red-dark:#9E0B22;
+  --black:#111111;
+  --charcoal:#1d1d1f;
+  --gray:#55555c;
+  --gray-light:#8a8a92;
+  --line:#e8e6e3;
+  --off-white:#faf9f7;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(17,17,17,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--charcoal);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.brand{font-family:'Archivo','Arial Black','Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.15;color:var(--black)}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.eyebrow::before{content:"";width:22px;height:3px;background:var(--red);border-radius:2px}
+.section-title{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;margin-bottom:16px}
+.section-sub{color:var(--gray);font-size:1.05rem;max-width:640px}
+.center{text-align:center}
+.center .section-sub{margin:0 auto}
+.center .eyebrow::before{display:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:999px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;border:2px solid transparent;transition:all .2s ease}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 20px rgba(200,16,46,.3)}
+.btn-outline{border-color:var(--black);color:var(--black);background:transparent}
+.btn-outline:hover{background:var(--black);color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--black)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+
+/* Nav */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.15rem;letter-spacing:-.01em}
+.brand .mark{width:42px;height:42px;flex:none}
+.brand small{display:block;font-family:'Inter',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{font-weight:600;font-size:.93rem;color:var(--charcoal);position:relative}
+.nav-links a:not(.btn):hover{color:var(--red)}
+.nav-links .btn{padding:10px 22px;font-size:.85rem}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:24px;height:2.5px;background:var(--black);margin:5px 0;border-radius:2px;transition:.2s}
+
+/* Hero */
+.hero{position:relative;background:var(--black);color:#fff;padding:0;overflow:hidden}
+.hero-art{position:absolute;inset:0;width:100%;height:100%}
+.hero-art svg{width:100%;height:100%;object-fit:cover}
+.hero-inner{position:relative;z-index:2;padding:110px 0 150px;max-width:720px}
+.hero h1{color:#fff;font-size:clamp(2.4rem,5.5vw,4rem);font-weight:900;letter-spacing:-.02em;margin-bottom:20px}
+.hero h1 .accent{color:var(--red);-webkit-text-stroke:0}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,.85);max-width:560px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:42px}
+.trust-row{display:flex;gap:26px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:.88rem;font-weight:600;color:rgba(255,255,255,.92)}
+.trust-item svg{width:18px;height:18px;flex:none}
+
+/* Service cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:48px}
+.card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:all .25s ease;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--red)}
+.card-art{height:150px;background:var(--off-white);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+.card-art svg{width:100%;height:100%}
+.card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.15rem;font-weight:800;margin-bottom:10px}
+.card p{color:var(--gray);font-size:.93rem;flex:1}
+.card .learn{margin-top:18px;font-weight:700;font-size:.88rem;color:var(--red);display:inline-flex;align-items:center;gap:6px}
+.card:hover .learn{gap:10px}
+.card .learn{transition:gap .2s}
+
+/* Built for the IE */
+.ie-section{background:var(--off-white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ie-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.ie-cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.city-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:.85rem;font-weight:600;color:var(--charcoal)}
+.city-chip:hover{border-color:var(--red);color:var(--red)}
+.ie-art{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+
+/* Why us */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:48px}
+.pillar{padding:30px;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
+.pillar .ico{width:52px;height:52px;border-radius:12px;background:var(--red);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.pillar .ico svg{width:26px;height:26px}
+.pillar h3{font-size:1.1rem;font-weight:800;margin-bottom:8px}
+.pillar p{color:var(--gray);font-size:.92rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:56px;background:var(--black);border-radius:var(--radius);padding:44px 36px}
+.stat{text-align:center}
+.stat .num{font-family:'Archivo',sans-serif;font-size:2.4rem;font-weight:900;color:#fff}
+.stat .num em{color:var(--red);font-style:normal}
+.stat .lbl{color:rgba(255,255,255,.65);font-size:.85rem;font-weight:600;margin-top:4px}
+
+/* Comparison */
+.compare-wrap{overflow-x:auto;margin-top:48px;border:1px solid var(--line);border-radius:var(--radius)}
+table.compare{width:100%;border-collapse:collapse;min-width:640px;background:#fff}
+.compare th,.compare td{padding:18px 22px;text-align:left;font-size:.93rem;border-bottom:1px solid var(--line)}
+.compare thead th{font-family:'Archivo',sans-serif;font-weight:800;font-size:1rem}
+.compare thead th.img-col{background:var(--red);color:#fff;border-radius:0}
+.compare tbody tr:last-child td{border-bottom:none}
+.compare td:first-child{font-weight:700;color:var(--black);width:22%}
+.compare td.img-cell{background:rgba(200,16,46,.05);font-weight:600}
+.compare td .yes{color:var(--red);font-weight:800;margin-right:6px}
+.compare td .no{color:var(--gray-light);font-weight:800;margin-right:6px}
+
+/* Process */
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:48px}
+.step{position:relative;padding:30px 26px;border-radius:var(--radius);background:var(--off-white);border:1px solid var(--line)}
+.step .n{font-family:'Archivo',sans-serif;font-size:2.6rem;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--red);margin-bottom:12px}
+.step h3{font-size:1.08rem;font-weight:800;margin-bottom:8px}
+.step p{color:var(--gray);font-size:.9rem}
+
+/* Testimonials */
+.testi-section{background:var(--black)}
+.testi-section .section-title,.testi-section h2{color:#fff}
+.testi-section .section-sub{color:rgba(255,255,255,.7)}
+.testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.testi{background:#1c1c1e;border:1px solid #2c2c2e;border-radius:var(--radius);padding:30px}
+.testi .stars{color:var(--red);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.testi p{color:rgba(255,255,255,.88);font-size:.95rem;font-style:italic}
+.testi .who{margin-top:20px;display:flex;align-items:center;gap:12px}
+.testi .avatar{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:800;flex:none}
+.testi .who b{color:#fff;display:block;font-size:.92rem}
+.testi .who span{color:rgba(255,255,255,.55);font-size:.8rem}
+
+/* CTA band */
+.cta-band{background:var(--red);color:#fff;text-align:center;padding:80px 0}
+.cta-band h2{color:#fff;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;margin-bottom:14px}
+.cta-band p{color:rgba(255,255,255,.9);max-width:540px;margin:0 auto 30px}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:48px auto 0}
+.faq{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;font-weight:400;color:var(--red);transition:transform .2s;flex:none}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 4px 22px;color:var(--gray);font-size:.95rem;max-width:660px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;margin-top:48px}
+.contact-info h3{font-size:1.3rem;font-weight:800;margin-bottom:12px}
+.contact-info p{color:var(--gray);margin-bottom:22px}
+.contact-line{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-weight:600}
+.contact-line .ci{width:40px;height:40px;border-radius:10px;background:var(--off-white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none}
+.contact-line .ci svg{width:19px;height:19px}
+.form{background:var(--off-white);border:1px solid var(--line);border-radius:var(--radius);padding:34px}
+.form label{display:block;font-weight:700;font-size:.85rem;margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:'Inter',sans-serif;font-size:.93rem;margin-bottom:18px;background:#fff;color:var(--charcoal)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--red)}
+.form textarea{resize:vertical;min-height:110px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form .btn{width:100%}
+.form-note{font-size:.8rem;color:var(--gray-light);margin-top:12px;text-align:center}
+
+/* Footer */
+footer{background:var(--black);color:rgba(255,255,255,.7);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-grid h4{color:#fff;font-size:.95rem;margin-bottom:16px}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:10px}
+.foot-grid a{font-size:.9rem}
+.foot-grid a:hover{color:var(--red)}
+.foot-brand .brand{color:#fff}
+.foot-brand p{font-size:.9rem;margin-top:16px;max-width:280px}
+.foot-bottom{border-top:1px solid #2c2c2e;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.83rem;color:rgba(255,255,255,.45)}
+.foot-bottom .made{color:rgba(255,255,255,.6)}
+.foot-bottom .made em{color:var(--red);font-style:normal}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .ie-grid,.contact-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-inner{padding:80px 0 120px}
+}
+@media (max-width:760px){
+  .nav-links{position:fixed;inset:74px 0 auto 0;background:#fff;flex-direction:column;align-items:flex-start;padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .25s ease;box-shadow:0 20px 40px rgba(0,0,0,.08)}
+  .nav-links.open{transform:none}
+  .nav-toggle{display:block}
+  section{padding:64px 0}
+  .form .row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="Inland Marketing Group home">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="48" height="48" rx="10" fill="#111111"/>
+        <path d="M6 34 L16 20 L23 29 L31 16 L42 34 Z" fill="#C8102E"/>
+        <path d="M14 34 L22 24 L28 31 L34 22 L42 34 Z" fill="#ffffff" opacity=".9"/>
+        <circle cx="36" cy="12" r="4" fill="#C8102E"/>
+      </svg>
+      <span>IMG<small>Inland Marketing Group</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#areas">Service Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn btn-red">Free Audit</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <!-- Inland Empire scene: San Gorgonio range, palms, sun -->
+    <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1440" height="640" fill="#111111"/>
+      <circle cx="1150" cy="180" r="110" fill="#C8102E" opacity=".9"/>
+      <circle cx="1150" cy="180" r="150" fill="#C8102E" opacity=".15"/>
+      <!-- back range -->
+      <path d="M0 430 L180 300 L340 400 L520 260 L700 390 L900 250 L1080 380 L1260 290 L1440 400 L1440 640 L0 640 Z" fill="#26262a"/>
+      <!-- snow caps -->
+      <path d="M520 260 L561 290 L546 282 L532 292 L516 283 L500 291 L482 290 Z" fill="#f2f2f2" opacity=".85"/>
+      <path d="M900 250 L941 280 L926 272 L912 282 L896 273 L880 281 L857 280 Z" fill="#f2f2f2" opacity=".85"/>
+      <!-- front range -->
+      <path d="M0 520 L220 400 L420 500 L640 380 L860 500 L1100 400 L1300 490 L1440 430 L1440 640 L0 640 Z" fill="#1a1a1d"/>
+      <!-- valley floor -->
+      <rect y="560" width="1440" height="80" fill="#141416"/>
+      <!-- orange grove rows -->
+      <g fill="#2b2b2f">
+        <circle cx="120" cy="575" r="14"/><circle cx="170" cy="580" r="12"/><circle cx="220" cy="574" r="14"/><circle cx="270" cy="581" r="12"/><circle cx="320" cy="576" r="13"/>
+      </g>
+      <g fill="#C8102E" opacity=".85">
+        <circle cx="116" cy="571" r="2.4"/><circle cx="128" cy="577" r="2.4"/><circle cx="166" cy="577" r="2.2"/><circle cx="218" cy="570" r="2.4"/><circle cx="226" cy="578" r="2.2"/><circle cx="268" cy="578" r="2.2"/><circle cx="318" cy="572" r="2.4"/>
+      </g>
+      <!-- palms right -->
+      <g>
+        <rect x="1236" y="410" width="9" height="190" rx="4" fill="#1a1a1d"/>
+        <path d="M1240 415 C1200 385 1165 385 1140 400 C1175 400 1205 408 1240 422 Z" fill="#222226"/>
+        <path d="M1240 415 C1280 385 1315 385 1340 400 C1305 400 1275 408 1240 422 Z" fill="#222226"/>
+        <path d="M1240 413 C1215 375 1220 350 1235 335 C1230 365 1235 390 1242 415 Z" fill="#222226"/>
+        <path d="M1241 413 C1266 375 1261 350 1246 335 C1251 365 1246 390 1239 415 Z" fill="#222226"/>
+        <rect x="1345" y="455" width="7" height="150" rx="3" fill="#1a1a1d"/>
+        <path d="M1348 460 C1315 437 1288 437 1268 449 C1297 449 1321 455 1348 466 Z" fill="#222226"/>
+        <path d="M1348 460 C1381 437 1408 437 1428 449 C1399 449 1375 455 1348 466 Z" fill="#222226"/>
+        <path d="M1348 458 C1328 428 1332 408 1344 396 C1340 420 1344 440 1350 460 Z" fill="#222226"/>
+        <path d="M1349 458 C1369 428 1365 408 1353 396 C1357 420 1353 440 1347 460 Z" fill="#222226"/>
+      </g>
+      <!-- subtle grid of city lights -->
+      <g fill="#C8102E" opacity=".5">
+        <circle cx="480" cy="590" r="1.6"/><circle cx="530" cy="600" r="1.6"/><circle cx="600" cy="588" r="1.6"/><circle cx="660" cy="602" r="1.6"/><circle cx="730" cy="592" r="1.6"/><circle cx="800" cy="605" r="1.6"/><circle cx="870" cy="590" r="1.6"/><circle cx="950" cy="600" r="1.6"/><circle cx="1020" cy="588" r="1.6"/><circle cx="1090" cy="603" r="1.6"/>
+      </g>
+      <g fill="#ffffff" opacity=".35">
+        <circle cx="505" cy="596" r="1.3"/><circle cx="575" cy="604" r="1.3"/><circle cx="640" cy="593" r="1.3"/><circle cx="705" cy="606" r="1.3"/><circle cx="775" cy="595" r="1.3"/><circle cx="845" cy="604" r="1.3"/><circle cx="915" cy="592" r="1.3"/><circle cx="990" cy="606" r="1.3"/><circle cx="1060" cy="594" r="1.3"/>
+      </g>
+      <rect width="1440" height="640" fill="url(#fade)"/>
+      <defs>
+        <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#111111" stop-opacity=".92"/>
+          <stop offset=".55" stop-color="#111111" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#111111" stop-opacity=".1"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="container hero-inner">
+    <h1>Inland Roots.<br><span class="accent">Built to Be Found.</span></h1>
+    <p>We build search-ready websites and marketing systems for Inland Empire businesses — so when your neighbors search, and when AI answers, they find you first.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-red">Get a Free Audit</a>
+      <a href="#services" class="btn btn-white">See What We Do</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="#C8102E"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.7L12 16.9 5.9 20.3l1.5-6.7L2.2 9l6.9-.7z"/></svg>
+        5.0 Google Rating
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2.2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Inland Empire Based &amp; Owned
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2.2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        Built for AI Search
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2 class="section-title">Marketing that gets IE businesses found</h2>
+      <p class="section-sub">Four core services, all handled personally — no outsourcing, no templates, no runaround.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-art">
+          <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#faf9f7"/>
+            <rect x="70" y="30" width="160" height="90" rx="10" fill="#111"/>
+            <circle cx="150" cy="62" r="16" fill="none" stroke="#C8102E" stroke-width="4"/>
+            <line x1="161" y1="74" x2="176" y2="89" stroke="#C8102E" stroke-width="5" stroke-linecap="round"/>
+            <rect x="95" y="98" width="70" height="6" rx="3" fill="#fff" opacity=".8"/>
+            <rect x="95" y="108" width="45" height="5" rx="2.5" fill="#C8102E"/>
+            <circle cx="238" cy="38" r="12" fill="#C8102E"/>
+            <path d="M233 38l3.5 3.5 6-6.5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>AI Search Visibility</h3>
+          <p>When people ask ChatGPT, Gemini, or Perplexity for "the best ___ near me," we make sure your business is the answer.</p>
+          <a class="learn" href="#contact">Learn More →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-art">
+          <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#faf9f7"/>
+            <path d="M150 25c-22 0-40 17-40 39 0 28 40 61 40 61s40-33 40-61c0-22-18-39-40-39z" fill="#C8102E"/>
+            <circle cx="150" cy="63" r="16" fill="#fff"/>
+            <text x="150" y="70" text-anchor="middle" font-family="Archivo,Arial" font-weight="900" font-size="18" fill="#111">1</text>
+            <rect x="55" y="120" width="190" height="8" rx="4" fill="#111" opacity=".12"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>Local SEO Optimization</h3>
+          <p>Page 1 of Google and the Map Pack for the searches that matter in Riverside, San Bernardino, and beyond.</p>
+          <a class="learn" href="#contact">Learn More →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-art">
+          <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#faf9f7"/>
+            <rect x="60" y="28" width="180" height="100" rx="8" fill="#111"/>
+            <rect x="60" y="28" width="180" height="18" rx="8" fill="#26262a"/>
+            <circle cx="72" cy="37" r="3" fill="#C8102E"/><circle cx="82" cy="37" r="3" fill="#fff" opacity=".5"/><circle cx="92" cy="37" r="3" fill="#fff" opacity=".5"/>
+            <rect x="75" y="58" width="80" height="9" rx="4" fill="#fff"/>
+            <rect x="75" y="73" width="55" height="6" rx="3" fill="#fff" opacity=".5"/>
+            <rect x="75" y="95" width="52" height="16" rx="8" fill="#C8102E"/>
+            <path d="M170 60 L200 60 L215 75 L200 112 L170 112 Z" fill="#C8102E" opacity=".25"/>
+            <path d="M180 70 L210 100 M210 70 L180 100" stroke="#C8102E" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>Website Design</h3>
+          <p>Custom-built, fast, mobile-first sites written for your customers — never a recycled template.</p>
+          <a class="learn" href="#contact">Learn More →</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-art">
+          <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#faf9f7"/>
+            <rect x="70" y="95" width="24" height="30" rx="4" fill="#111"/>
+            <rect x="105" y="75" width="24" height="50" rx="4" fill="#111"/>
+            <rect x="140" y="55" width="24" height="70" rx="4" fill="#C8102E"/>
+            <rect x="175" y="38" width="24" height="87" rx="4" fill="#111"/>
+            <path d="M75 80 L112 60 L148 42 L185 25" stroke="#C8102E" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M172 22 L188 24 L184 39" stroke="#C8102E" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>Digital Marketing</h3>
+          <p>Google Ads, Meta, social, and email campaigns that turn IE attention into booked jobs and sales.</p>
+          <a class="learn" href="#contact">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUILT FOR THE IE ============ -->
+<section class="ie-section" id="areas">
+  <div class="container ie-grid">
+    <div class="reveal">
+      <span class="eyebrow">Built for the Inland Empire</span>
+      <h2 class="section-title">We market where we live</h2>
+      <p class="section-sub">From the citrus heritage of Redlands to the logistics corridors of Ontario and Fontana, the Inland Empire isn't a market we studied — it's home. We know how IE customers search, what they trust, and what makes them call. That local instinct goes into every site we build and every campaign we run.</p>
+      <div class="ie-cities">
+        <span class="city-chip">Riverside</span>
+        <span class="city-chip">San Bernardino</span>
+        <span class="city-chip">Ontario</span>
+        <span class="city-chip">Rancho Cucamonga</span>
+        <span class="city-chip">Fontana</span>
+        <span class="city-chip">Corona</span>
+        <span class="city-chip">Moreno Valley</span>
+        <span class="city-chip">Redlands</span>
+        <span class="city-chip">Temecula</span>
+        <span class="city-chip">Murrieta</span>
+        <span class="city-chip">Chino</span>
+        <span class="city-chip">Upland</span>
+      </div>
+    </div>
+    <div class="ie-art reveal" aria-hidden="true">
+      <!-- Citrus grove + Mt. Baldy daytime scene -->
+      <svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+        <rect width="560" height="420" fill="#ffffff"/>
+        <rect width="560" height="420" fill="#C8102E" opacity=".04"/>
+        <circle cx="460" cy="80" r="46" fill="#C8102E"/>
+        <path d="M0 250 L110 150 L200 230 L290 130 L400 240 L480 170 L560 250 L560 420 L0 420 Z" fill="#111111"/>
+        <path d="M290 130 L315 155 L303 149 L292 157 L279 150 L268 155 Z" fill="#fff"/>
+        <path d="M110 150 L134 172 L122 166 L111 174 L98 167 L86 172 Z" fill="#fff"/>
+        <path d="M0 300 L90 240 L190 300 L300 235 L420 300 L500 255 L560 295 L560 420 L0 420 Z" fill="#2a2a2e"/>
+        <!-- grove rows -->
+        <g>
+          <g fill="#111111">
+            <circle cx="60" cy="330" r="22"/><circle cx="140" cy="338" r="20"/><circle cx="220" cy="330" r="22"/><circle cx="300" cy="340" r="20"/><circle cx="380" cy="332" r="22"/><circle cx="460" cy="340" r="20"/>
+          </g>
+          <g fill="#C8102E">
+            <circle cx="52" cy="324" r="4"/><circle cx="68" cy="333" r="4"/><circle cx="134" cy="332" r="3.6"/><circle cx="147" cy="341" r="3.6"/><circle cx="213" cy="325" r="4"/><circle cx="229" cy="334" r="4"/><circle cx="294" cy="335" r="3.6"/><circle cx="308" cy="343" r="3.6"/><circle cx="373" cy="326" r="4"/><circle cx="389" cy="335" r="4"/><circle cx="454" cy="335" r="3.6"/><circle cx="467" cy="343" r="3.6"/>
+          </g>
+          <g fill="#111111">
+            <rect x="56" y="348" width="8" height="34" rx="3"/><rect x="136" y="354" width="8" height="30" rx="3"/><rect x="216" y="348" width="8" height="34" rx="3"/><rect x="296" y="356" width="8" height="28" rx="3"/><rect x="376" y="350" width="8" height="32" rx="3"/><rect x="456" y="356" width="8" height="28" rx="3"/>
+          </g>
+        </g>
+        <rect y="392" width="560" height="28" fill="#111111"/>
+        <g stroke="#ffffff" stroke-width="3" stroke-dasharray="16 14"><line x1="0" y1="406" x2="560" y2="406"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY IMG ============ -->
+<section id="about">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Why Inland Marketing Group</span>
+      <h2 class="section-title">Big-agency results, hometown accountability</h2>
+      <p class="section-sub">You'll never be handed off to an account manager who's never set foot in the IE.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <h3>Personally Handled</h3>
+        <p>Your project is done by the people you hired — strategy, design, and copy. Nothing gets shipped overseas or lost in a ticket queue.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </div>
+        <h3>Inland Empire Based</h3>
+        <p>We live here, shop here, and drive the 10, 15, 60, and 91 like you do. Local context isn't research for us — it's daily life.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Direct Communication</h3>
+        <p>Call, text, or email and you reach the person doing the work. Responses within 24 hours — usually the same day.</p>
+      </div>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="num">87<em>%</em></div><div class="lbl">AI Brand Visibility Score</div></div>
+      <div class="stat"><div class="num">5.0<em>★</em></div><div class="lbl">Google Rating</div></div>
+      <div class="stat"><div class="num">2–3<em>wk</em></div><div class="lbl">Average Site Launch Time</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">The Difference</span>
+      <h2 class="section-title">IMG vs. the big agencies</h2>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="img-col">Inland Marketing Group</th>
+            <th>Big Agencies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Communication</td><td class="img-cell"><span class="yes">✓</span>Direct line to the people doing the work</td><td><span class="no">✕</span>Account managers and ticket systems</td></tr>
+          <tr><td>The Work</td><td class="img-cell"><span class="yes">✓</span>Handled personally, in-house</td><td><span class="no">✕</span>Outsourced and passed around</td></tr>
+          <tr><td>Websites</td><td class="img-cell"><span class="yes">✓</span>Custom-built for your business</td><td><span class="no">✕</span>Recycled templates</td></tr>
+          <tr><td>SEO</td><td class="img-cell"><span class="yes">✓</span>Local-first, built for Google &amp; AI search</td><td><span class="no">✕</span>Generic checklists and monthly PDFs</td></tr>
+          <tr><td>Support</td><td class="img-cell"><span class="yes">✓</span>Same-day answers from a real person</td><td><span class="no">✕</span>48-hour SLAs, if you're lucky</td></tr>
+          <tr><td>The Feel</td><td class="img-cell"><span class="yes">✓</span>A partner invested in the IE</td><td><span class="no">✕</span>A line item on someone's client list</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="ie-section">
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow">The Process</span>
+      <h2 class="section-title">Simple, transparent, fast</h2>
+      <p class="section-sub">From first conversation to launch in weeks — with full visibility the whole way.</p>
+    </div>
+    <div class="process">
+      <div class="step reveal"><div class="n">01</div><h3>Discovery</h3><p>A real conversation about your business, your customers, and what "winning" looks like for you.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Strategy</h3><p>A custom plan for your market and budget — not a package pulled off a shelf.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Build &amp; Launch</h3><p>We design, write, and build. You see progress at every step and launch in 2–3 weeks on average.</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Grow</h3><p>Ongoing optimization, monitoring, and reporting so results compound month over month.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<!-- NOTE: Sample placeholder quotes — replace with your real client reviews before launch -->
+<section class="testi-section">
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow" style="color:#fff">Client Stories</span>
+      <h2 class="section-title">Trusted by IE business owners</h2>
+    </div>
+    <div class="testis">
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Our old site never brought in a single call. Within two months of the new one going live, we were booking jobs straight from Google."</p>
+        <div class="who"><div class="avatar">M</div><div><b>Maria G.</b><span>Restaurant Owner, Riverside</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"They actually answer the phone. After years of agencies ghosting us, having a local team that texts back the same day is night and day."</p>
+        <div class="who"><div class="avatar">D</div><div><b>David R.</b><span>HVAC Contractor, Fontana</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We show up when people ask ChatGPT for boutiques in our area. I didn't even know that was a thing you could optimize for."</p>
+        <div class="who"><div class="avatar">S</div><div><b>Sarah L.</b><span>Boutique Owner, Rancho Cucamonga</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band" style="padding:80px 0">
+  <div class="container reveal">
+    <h2>Want to be our next success story?</h2>
+    <p>We take on a limited number of new clients each month so every project gets our full attention. Grab a spot with a free, no-pressure audit.</p>
+    <a href="#contact" class="btn btn-white">Get Free Audit</a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="reveal center">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">Questions, answered</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq"><summary>What makes IMG different from other agencies?</summary><div class="a">We're a small Inland Empire studio, not a volume shop. Your work is handled personally by the people you hire, your calls get answered, and every site and campaign is built custom for your business and this market.</div></details>
+      <details class="faq"><summary>What is AI Search Visibility?</summary><div class="a">More and more customers ask ChatGPT, Gemini, and Perplexity for recommendations instead of Googling. AI Search Visibility is the work of structuring your website, listings, and content so those AI tools know who you are and recommend you for local searches.</div></details>
+      <details class="faq"><summary>How does Local SEO work?</summary><div class="a">We optimize your Google Business Profile, website content, citations, and reviews so you rank in the Map Pack and on Page 1 for the searches your customers actually make — "plumber in Corona," "tacos near Ontario Mills," and so on.</div></details>
+      <details class="faq"><summary>How long does a website take?</summary><div class="a">Most sites launch in 2–3 weeks. Larger builds with e-commerce or lots of pages can take longer — we'll give you a clear timeline before we start.</div></details>
+      <details class="faq"><summary>Who actually does the work?</summary><div class="a">We do. Strategy, design, copywriting, and campaign management are all handled in-house. Nothing is white-labeled or shipped to a subcontractor you've never met.</div></details>
+      <details class="faq"><summary>Do you require long-term contracts?</summary><div class="a">No. Website projects are flat-scope, and marketing services are month-to-month. We keep clients with results, not paperwork.</div></details>
+      <details class="faq"><summary>What areas do you serve?</summary><div class="a">The Inland Empire first — Riverside and San Bernardino counties, including Riverside, San Bernardino, Ontario, Rancho Cucamonga, Fontana, Corona, Moreno Valley, Redlands, Temecula, and surrounding cities. We also work with businesses beyond the IE remotely.</div></details>
+      <details class="faq"><summary>What does the free audit include?</summary><div class="a">We review your website, Google Business Profile, local rankings, and AI search presence, then walk you through what's working, what's costing you customers, and what we'd fix first — no obligation.</div></details>
+      <details class="faq"><summary>Can you help if my business is outside the Inland Empire?</summary><div class="a">Yes. Our local-first playbook works anywhere — we just happen to know the IE best. If you're elsewhere in SoCal or beyond, reach out and we'll talk it through.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="ie-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Get Started</span>
+      <h2 class="section-title">Ready to grow your Inland Empire business?</h2>
+      <p class="section-sub">Tell us a little about your business and we'll send back a free audit — what's working, what isn't, and what we'd do about it.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Talk to a real person</h3>
+        <p>Response within 24 hours — usually the same day.</p>
+        <div class="contact-line">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 7L22 7"/></svg></div>
+          <a href="mailto:hello@inlandmarketinggroup.com">hello@inlandmarketinggroup.com</a>
+        </div>
+        <div class="contact-line">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <a href="tel:+19095550123">(909) 555-0123</a>
+        </div>
+        <div class="contact-line">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <span>Serving Riverside &amp; San Bernardino Counties</span>
+        </div>
+      </div>
+      <form class="form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks — we\'ll be in touch!';">
+        <div class="row">
+          <div><label for="f-name">Name *</label><input id="f-name" type="text" required placeholder="Your name"></div>
+          <div><label for="f-phone">Phone (optional)</label><input id="f-phone" type="tel" placeholder="(909) 555-0123"></div>
+        </div>
+        <label for="f-url">Website URL (optional)</label>
+        <input id="f-url" type="url" placeholder="https://yourbusiness.com">
+        <label for="f-service">What do you need?</label>
+        <select id="f-service">
+          <option>A new website</option>
+          <option>A website redesign</option>
+          <option>Local SEO</option>
+          <option>AI search visibility</option>
+          <option>Google / Meta ads</option>
+          <option>Ongoing support</option>
+          <option>Something else</option>
+        </select>
+        <label for="f-msg">Message *</label>
+        <textarea id="f-msg" required placeholder="Tell us about your business and what you're hoping to accomplish…"></textarea>
+        <button type="submit" class="btn btn-red">Send →</button>
+        <p class="form-note">No spam, no pressure. Just an honest look at your online presence.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <svg class="mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="48" height="48" rx="10" fill="#C8102E"/>
+            <path d="M6 34 L16 20 L23 29 L31 16 L42 34 Z" fill="#111111"/>
+            <path d="M14 34 L22 24 L28 31 L34 22 L42 34 Z" fill="#ffffff" opacity=".9"/>
+            <circle cx="36" cy="12" r="4" fill="#ffffff"/>
+          </svg>
+          <span>IMG<small style="color:rgba(255,255,255,.6)">Inland Marketing Group</small></span>
+        </a>
+        <p>A hometown digital studio helping Inland Empire businesses get found on Google, on social, and in AI search.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AI Search Visibility</a></li>
+          <li><a href="#services">Local SEO</a></li>
+          <li><a href="#services">Website Design</a></li>
+          <li><a href="#services">Digital Marketing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:hello@inlandmarketinggroup.com">hello@inlandmarketinggroup.com</a></li>
+          <li><a href="tel:+19095550123">(909) 555-0123</a></li>
+          <li><a href="#contact">Free Audit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Inland Marketing Group. All rights reserved.</span>
+      <span class="made">Designed, written, and built in the <em>Inland Empire</em>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a =>
+  a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open')));
+</script>
+
+</body>
+</html>
